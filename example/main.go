@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"heartbeatCheck"
 	"time"
+
+	"github.com/jursonmo/regularcheck"
 )
 
 func main() {
@@ -22,7 +23,7 @@ func main() {
 		return testcount
 	}
 
-	r := heartbeatCheck.New(checkFn, timeoutCallback, time.Second*3, time.Second, 3)
+	r := regularcheck.New(checkFn, timeoutCallback, time.Second*3, time.Second, 3)
 	go r.Run()
 	for {
 		time.Sleep(time.Second)

@@ -1,4 +1,4 @@
-package heartbeatCheck
+package regularcheck
 
 import (
 	"fmt"
